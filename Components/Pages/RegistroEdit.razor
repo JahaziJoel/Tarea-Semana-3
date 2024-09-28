@@ -1,0 +1,42 @@
+@page "/registro/nuevo"
+@inject NavigationManager NavMan
+@inject IJSRuntime JSx
+@rendermode InteractiveServer
+@using System.Text.Json;
+<h3>Datos del Registro</h3>
+
+<EditForm Model="@registro" OnValidSubmit="@GuardarRegistro">
+    <DataAnnotationsValidator/>
+    
+
+    <div class="mb-3">
+        <label for="fecha" class="form-label">Fecha</label>
+        <InputDate id="fecha" class="form-control" @bind-Value="@registro.Fecha"/>
+        <ValidationMessage For="@(() => registro.Fecha)"/>
+    </div>
+    <div class="mb-3">
+        <label for="descripcion" class="form-label">Descripcion</label>
+        <InputTextArea id="descripcion" class="form-control" @bind="@registro.Descripcion"/>
+        <ValidationMessage For="@(() =>registro.Descripcion)" />
+    </div>
+    
+    <div class="text-centar">
+        <ValidationSummary/>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+    </div>
+   
+</EditForm>
+
+@code {
+
+    private Reporte registro = new Reporte();
+    List <Reporte> registros = new List<Reporte>();
+
+    private void GuardarRegistro()
+    {
+        registros.Add(registro);
+        JSx.InvokeVoidAsync("localStorage.setItem", "registros", JsonSerializer.Serialize(registros));
+
+        NavMan.NavigateTo("registro");
+    }
+}   

@@ -1,0 +1,47 @@
+@page "/registro"
+@inject NavigationManager NavMan
+@rendermode InteractiveServer
+
+<h3>Registros recibidos</h3>
+
+<div class="text-end">
+    <button class= "btn btn-rpimary" @onclick="NuevoRegistro">Nuevo registro</button>
+</div>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Fecha</th>
+            <th>Descripcion</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var registro in registros)
+        {
+            <tr>
+                <td>@registro.Fecha</td>
+                <td>@registro.Descripcion</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@code {
+    List<Reporte> registros = new List<Reporte>();
+    private void NuevoRegistro()
+    {
+        NavMan.NavigateTo("registro/nuevo");
+
+    }
+    //after render first time
+    protected override void OnAfterRender(bool firstRender)
+    {
+        if (firstRender)
+        {
+            var registrosJson = JSx.InvokeAsync<string>("localStorage.getItem", "registros").Result;
+            JSx.InvokeVoidAsync("alert", registrosJson);
+        }
+    }
+
+}

@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Jahaziel\\Web\\Tarea3\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Tarea3.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Tarea3.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\Jahaziel\\Web\\Tarea3\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\Jahaziel\\Web\\Tarea3\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Jahaziel\\Web\\Tarea3\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Jahaziel\\Web\\Tarea3\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Tarea3.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Tarea3.props",
+      "PackagePath": "build\\Tarea3.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Tarea3.props",
+      "PackagePath": "buildMultiTargeting\\Tarea3.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Tarea3.props",
+      "PackagePath": "buildTransitive\\Tarea3.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
